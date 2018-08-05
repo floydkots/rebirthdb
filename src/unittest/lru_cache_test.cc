@@ -9,7 +9,7 @@ TEST(LRUCacheTest, Basic) {
     EXPECT_TRUE(cache.insert("4", "5"));
     EXPECT_TRUE(cache.insert("8", "10"));
     EXPECT_TRUE(cache.insert("0", "12"));
-    EXPECT_EQ(3, cache.size());
+    EXPECT_EQ(2, cache.size());
     EXPECT_EQ(4, cache.max_size());
     std::string *p;
     bool res = cache.lookup("8", &p);
