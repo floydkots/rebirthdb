@@ -4,7 +4,8 @@
 
 
 [![Build Status](https://travis-ci.org/RebirthDB/rebirthdb.svg?branch=next)](https://travis-ci.org/RebirthDB/rebirthdb)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e486b20dee3141c89dcb974fe1ae16de)](https://www.codacy.com/app/RebirthDB/rebirthdb?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=RebirthDB/rebirthdb&amp;utm_campaign=Badge_Grade) [![Coverage Status](https://coveralls.io/repos/github/RebirthDB/rebirthdb/badge.svg?branch=next)](https://coveralls.io/github/RebirthDB/rebirthdb?branch=next)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e486b20dee3141c89dcb974fe1ae16de)](https://www.codacy.com/app/RebirthDB/rebirthdb?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=RebirthDB/rebirthdb&amp;utm_campaign=Badge_Grade)
+[![Coverage Status](https://coveralls.io/repos/github/RebirthDB/rebirthdb/badge.svg?branch=next)](https://coveralls.io/github/RebirthDB/rebirthdb?branch=next)
 
 ## What is RebirthDB?
 
@@ -39,9 +40,9 @@ $ sudo apt-get install rebirthdb
 
 #### **Centos 7**
 ```bash
-sudo wget https://dl.bintray.com/rebirthdb/rpm/centos/7/x86_64/rebirthdb.repo \
+sudo wget https://dl.bintray.com/rebirthdb/rpm/stable/centos/7/x86_64/rebirthdb.repo \
     -O /etc/yum.repos.d/rebirthdb.repo
-sudo yum install rebirthdb 
+sudo yum install rebirthdb
 ```
 
 ### 2. Start the server

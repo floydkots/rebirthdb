@@ -223,6 +223,8 @@ jobs:
   - stage: Packaging and Deployment
     # We don't sign the package (SIGN_PACKAGE=0) while building it on travis because bintray will do that
     # automatically once we upload the package.
+    # This condition '"$TRAVIS_TAG" =~ ^v[\d]+.[\d]+.[\d]+$' matches tags of the form v2.4.0 and does not
+    # match v2.4.0-beta.0
     name: Trusty Packaging and Deployment
     env: DISTRIBUTION=trusty
     before_script:
@@ -255,6 +257,7 @@ jobs:
       on:
         branch: next
         tags: true
+        condition: '"$TRAVIS_TAG" =~ ^v[\d]+.[\d]+.[\d]+$'
       skip_cleanup: true
     - provider: script
       script: >-
@@ -304,6 +307,7 @@ jobs:
       on:
         branch: next
         tags: true
+        condition: '"$TRAVIS_TAG" =~ ^v[\d]+.[\d]+.[\d]+$'
       skip_cleanup: true
     - provider: script
       script: >-
@@ -353,6 +357,7 @@ jobs:
       on:
         branch: next
         tags: true
+        condition: '"$TRAVIS_TAG" =~ ^v[\d]+.[\d]+.[\d]+$'
       skip_cleanup: true
     - provider: script
       script: >-
@@ -402,6 +407,7 @@ jobs:
       on:
         branch: next
         tags: true
+        condition: '"$TRAVIS_TAG" =~ ^v[\d]+.[\d]+.[\d]+$'
       skip_cleanup: true
     - provider: script
       script: >-
@@ -451,6 +457,7 @@ jobs:
       on:
         branch: next
         tags: true
+        condition: '"$TRAVIS_TAG" =~ ^v[\d]+.[\d]+.[\d]+$'
       skip_cleanup: true
     - provider: script
       script: >-
@@ -491,10 +498,11 @@ jobs:
         --override=true
         "/rebirthdb_packages/rebirthdb*.rpm"
         $BINTRAY_SUBJECT/rpm/rebirthdb/$(./scripts/gen-version.sh)
-        centos/7/x86_64/
+        stable/centos/7/x86_64/
       on:
         branch: next
         tags: true
+        condition: '"$TRAVIS_TAG" =~ ^v[\d]+.[\d]+.[\d]+$'
       skip_cleanup: true
     - provider: script
       script: >-
@@ -506,7 +514,7 @@ jobs:
         --override=true
         "/rebirthdb_packages/rebirthdb*.rpm"
         $BINTRAY_SUBJECT/rpm/rebirthdb-dev/$(./scripts/gen-version.sh)
-        centos/7/x86_64/
+        dev/centos/7/x86_64/
       on:
         all_branches: true
       skip_cleanup: true
