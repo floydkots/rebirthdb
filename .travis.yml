@@ -18,7 +18,7 @@
 # For a good explanation of their use, see this StackOverflow answer at:
 # https://stackoverflow.com/a/21699210/6163906
 
-sudo: true
+sudo: required
 dist: trusty
 language: cpp
 
@@ -254,9 +254,8 @@ jobs:
         $BINTRAY_SUBJECT/apt/rebirthdb/$(./scripts/gen-version.sh)
         pool/r/rebirthdb/
       on:
-        branch: next
-        tags: true
-        condition: tag =~ /^v[\d]+.[\d]+.[\d]+$/
+        all_branches: true
+        condition: branch =~ /^v[\d]+.[\d]+.[\d]+$/
       skip_cleanup: true
     - provider: script
       script: >-
@@ -304,9 +303,8 @@ jobs:
         $BINTRAY_SUBJECT/apt/rebirthdb/$(./scripts/gen-version.sh)
         pool/r/rebirthdb/
       on:
-        branch: next
-        tags: true
-        condition: tag =~ /^v[\d]+.[\d]+.[\d]+$/
+        all_branches: true
+        condition: branch =~ /^v[\d]+.[\d]+.[\d]+$/
       skip_cleanup: true
     - provider: script
       script: >-
@@ -354,9 +352,8 @@ jobs:
         $BINTRAY_SUBJECT/apt/rebirthdb/$(./scripts/gen-version.sh)
         pool/r/rebirthdb/
       on:
-        branch: next
-        tags: true
-        condition: tag =~ /^v[\d]+.[\d]+.[\d]+$/
+        all_branches: true
+        condition: branch =~ /^v[\d]+.[\d]+.[\d]+$/
       skip_cleanup: true
     - provider: script
       script: >-
@@ -404,9 +401,8 @@ jobs:
         $BINTRAY_SUBJECT/apt/rebirthdb/$(./scripts/gen-version.sh)
         pool/r/rebirthdb/
       on:
-        branch: next
-        tags: true
-        condition: tag =~ /^v[\d]+.[\d]+.[\d]+$/
+        all_branches: true
+        condition: branch =~ /^v[\d]+.[\d]+.[\d]+$/
       skip_cleanup: true
     - provider: script
       script: >-
@@ -454,9 +450,8 @@ jobs:
         $BINTRAY_SUBJECT/apt/rebirthdb/$(./scripts/gen-version.sh)
         pool/r/rebirthdb/
       on:
-        branch: next
-        tags: true
-        condition: tag =~ /^v[\d]+.[\d]+.[\d]+$/
+        all_branches: true
+        condition: branch =~ /^v[\d]+.[\d]+.[\d]+$/
       skip_cleanup: true
     - provider: script
       script: >-
@@ -499,9 +494,8 @@ jobs:
         $BINTRAY_SUBJECT/rpm/rebirthdb/$(./scripts/gen-version.sh)
         stable/centos/7/x86_64/
       on:
-        branch: next
-        tags: true
-        condition: tag =~ /^v[\d]+.[\d]+.[\d]+$/
+        all_branches: true
+        condition: branch =~ /^v[\d]+.[\d]+.[\d]+$/
       skip_cleanup: true
     - provider: script
       script: >-
