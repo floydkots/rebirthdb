@@ -219,7 +219,6 @@ jobs:
 
 
 
-
   - stage: Packaging and Deployment
     # We don't sign the package (SIGN_PACKAGE=0) while building it on travis because bintray will do that
     # automatically once we upload the package.
@@ -257,7 +256,7 @@ jobs:
       on:
         branch: next
         tags: true
-        condition: '"$TRAVIS_TAG" =~ ^v[\d]+.[\d]+.[\d]+$'
+        condition: tag =~ /^v[\d]+.[\d]+.[\d]+$/
       skip_cleanup: true
     - provider: script
       script: >-
@@ -307,7 +306,7 @@ jobs:
       on:
         branch: next
         tags: true
-        condition: '"$TRAVIS_TAG" =~ ^v[\d]+.[\d]+.[\d]+$'
+        condition: tag =~ /^v[\d]+.[\d]+.[\d]+$/
       skip_cleanup: true
     - provider: script
       script: >-
@@ -357,7 +356,7 @@ jobs:
       on:
         branch: next
         tags: true
-        condition: '"$TRAVIS_TAG" =~ ^v[\d]+.[\d]+.[\d]+$'
+        condition: tag =~ /^v[\d]+.[\d]+.[\d]+$/
       skip_cleanup: true
     - provider: script
       script: >-
@@ -407,7 +406,7 @@ jobs:
       on:
         branch: next
         tags: true
-        condition: '"$TRAVIS_TAG" =~ ^v[\d]+.[\d]+.[\d]+$'
+        condition: tag =~ /^v[\d]+.[\d]+.[\d]+$/
       skip_cleanup: true
     - provider: script
       script: >-
@@ -457,7 +456,7 @@ jobs:
       on:
         branch: next
         tags: true
-        condition: '"$TRAVIS_TAG" =~ ^v[\d]+.[\d]+.[\d]+$'
+        condition: tag =~ /^v[\d]+.[\d]+.[\d]+$/
       skip_cleanup: true
     - provider: script
       script: >-
@@ -502,7 +501,7 @@ jobs:
       on:
         branch: next
         tags: true
-        condition: '"$TRAVIS_TAG" =~ ^v[\d]+.[\d]+.[\d]+$'
+        condition: tag =~ /^v[\d]+.[\d]+.[\d]+$/
       skip_cleanup: true
     - provider: script
       script: >-
