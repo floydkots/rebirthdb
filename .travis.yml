@@ -254,8 +254,9 @@ jobs:
         $BINTRAY_SUBJECT/apt/rebirthdb/$(./scripts/gen-version.sh)
         pool/r/rebirthdb/
       on:
-        all_branches: true
-        condition: branch =~ /^v[\d]+.[\d]+.[\d]+$/
+        branch: next
+        tags: true
+        condition: $TRAVIS_TAG =~ ^v[\d]+.[\d]+.[\d]+$
       skip_cleanup: true
     - provider: script
       script: >-
@@ -303,8 +304,9 @@ jobs:
         $BINTRAY_SUBJECT/apt/rebirthdb/$(./scripts/gen-version.sh)
         pool/r/rebirthdb/
       on:
-        all_branches: true
-        condition: branch =~ /^v[\d]+.[\d]+.[\d]+$/
+        branch: next
+        tags: true
+        condition: $TRAVIS_TAG =~ ^v[\d]+.[\d]+.[\d]+$
       skip_cleanup: true
     - provider: script
       script: >-
@@ -352,8 +354,9 @@ jobs:
         $BINTRAY_SUBJECT/apt/rebirthdb/$(./scripts/gen-version.sh)
         pool/r/rebirthdb/
       on:
-        all_branches: true
-        condition: branch =~ /^v[\d]+.[\d]+.[\d]+$/
+        branch: next
+        tags: true
+        condition: $TRAVIS_TAG =~ ^v[\d]+.[\d]+.[\d]+$
       skip_cleanup: true
     - provider: script
       script: >-
@@ -401,8 +404,9 @@ jobs:
         $BINTRAY_SUBJECT/apt/rebirthdb/$(./scripts/gen-version.sh)
         pool/r/rebirthdb/
       on:
-        all_branches: true
-        condition: branch =~ /^v[\d]+.[\d]+.[\d]+$/
+        branch: next
+        tags: true
+        condition: $TRAVIS_TAG =~ ^v[\d]+.[\d]+.[\d]+$
       skip_cleanup: true
     - provider: script
       script: >-
@@ -450,8 +454,9 @@ jobs:
         $BINTRAY_SUBJECT/apt/rebirthdb/$(./scripts/gen-version.sh)
         pool/r/rebirthdb/
       on:
-        all_branches: true
-        condition: branch =~ /^v[\d]+.[\d]+.[\d]+$/
+        branch: next
+        tags: true
+        condition: $TRAVIS_TAG =~ ^v[\d]+.[\d]+.[\d]+$
       skip_cleanup: true
     - provider: script
       script: >-
@@ -494,8 +499,9 @@ jobs:
         $BINTRAY_SUBJECT/rpm/rebirthdb/$(./scripts/gen-version.sh)
         stable/centos/7/x86_64/
       on:
-        all_branches: true
-        condition: branch =~ /^v[\d]+.[\d]+.[\d]+$/
+        branch: next
+        tags: true
+        condition: $TRAVIS_TAG =~ ^v[\d]+.[\d]+.[\d]+$
       skip_cleanup: true
     - provider: script
       script: >-
